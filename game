@@ -1,0 +1,16 @@
+import random
+
+print("欢迎来到猜数字游戏！")
+secret = random.randint(1, 100)
+tries = 0
+
+while True:
+    guess = int(input("猜一个 1 到 100 的数字："))
+    tries += 1
+    if guess == secret:
+        print(f"恭喜你！猜对了！你用了 {tries} 次机会。")
+        break
+    elif guess < secret:
+        print("太小了，再试试。")
+    else:
+        print("太大了，再试试。")
